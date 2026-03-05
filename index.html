@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kurti Special Offer</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f2f2f2;
+text-align:center;
+}
+
+.header{
+background:#ff0066;
+color:white;
+padding:15px;
+font-size:22px;
+font-weight:bold;
+}
+
+.box{
+background:white;
+margin:15px;
+padding:20px;
+border-radius:12px;
+}
+
+.price{
+font-size:32px;
+color:red;
+font-weight:bold;
+}
+
+.old{
+text-decoration:line-through;
+color:gray;
+}
+
+button{
+background:#25D366;
+color:white;
+padding:16px;
+border:none;
+border-radius:8px;
+font-size:18px;
+width:90%;
+}
+
+.live{
+position:fixed;
+bottom:20px;
+left:20px;
+background:black;
+color:white;
+padding:10px;
+border-radius:6px;
+font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+🔥 Kurti Special Offer
+</div>
+
+<div class="box">
+
+<img src="kurti.jpg" width="90%">
+
+<p class="old">₹999</p>
+<p class="price">₹599 Only</p>
+
+<p>🚚 Cash On Delivery Available</p>
+
+<a href="https://wa.me/917357099128?text=I want to order this Kurti">
+<button>Order Now on WhatsApp</button>
+</a>
+
+</div>
+
+<div class="live" id="live">
+Someone from Delhi ordered this
+</div>
+
+<script>
+
+var names=["Riya","Neha","Simran","Pooja","Anjali"];
+var city=["Delhi","Jaipur","Lucknow","Indore","Patna"];
+
+setInterval(function(){
+
+var n=names[Math.floor(Math.random()*names.length)];
+var c=city[Math.floor(Math.random()*city.length)];
+
+document.getElementById("live").innerHTML=n+" from "+c+" just ordered";
+
+},4000);
+
+</script>
+
+</body>
+</html>
