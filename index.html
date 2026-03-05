@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Special Offer</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+text-align:center;
+background:linear-gradient(45deg,#ff0066,#ff9900,#00ccff);
+background-size:400% 400%;
+animation:bgmove 10s infinite;
+}
+
+@keyframes bgmove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.box{
+background:white;
+margin:20px;
+padding:20px;
+border-radius:12px;
+}
+
+.price{
+font-size:32px;
+color:red;
+font-weight:bold;
+}
+
+.old{
+text-decoration:line-through;
+color:gray;
+}
+
+button{
+background:#28a745;
+color:white;
+padding:15px;
+border:none;
+font-size:18px;
+border-radius:8px;
+width:90%;
+margin-top:10px;
+}
+
+.liveorder{
+position:fixed;
+bottom:20px;
+left:20px;
+background:black;
+color:white;
+padding:10px;
+border-radius:6px;
+font-size:14px;
+}
+
+.timer{
+color:red;
+font-size:22px;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>🔥 Today Special Offer</h2>
+
+<img src="PRODUCT_IMAGE_LINK" width="90%">
+
+<p class="old">₹999</p>
+<p class="price">₹599 Only</p>
+
+<p>🚚 Cash On Delivery Available</p>
+
+<p class="timer" id="timer"></p>
+
+<a href="YOUR_GOOGLE_FORM_LINK">
+<button>Order Now</button>
+</a>
+
+<a href="https://wa.me/YOURNUMBER">
+<button>Order on WhatsApp</button>
+</a>
+
+</div>
+
+<div class="liveorder" id="live">
+Someone from Delhi ordered this
+</div>
+
+<script>
+
+var time=900;
+
+setInterval(function(){
+
+var m=Math.floor(time/60);
+var s=time%60;
+
+document.getElementById("timer").innerHTML="Offer Ends In "+m+":"+s;
+
+time--;
+
+},1000);
+
+var names=["Riya","Neha","Pooja","Simran","Anjali"];
+var city=["Delhi","Jaipur","Lucknow","Indore","Patna"];
+
+setInterval(function(){
+
+var n=names[Math.floor(Math.random()*names.length)];
+var c=city[Math.floor(Math.random()*city.length)];
+
+document.getElementById("live").innerHTML=n+" from "+c+" just ordered";
+
+},5000);
+
+</script>
+
+</body>
+</html>
